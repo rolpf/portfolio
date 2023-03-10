@@ -21,7 +21,31 @@
     "useRootPaddingAwareAlignments": true,
     "color": {
       "palette": [
-
+        {
+          "slug": "jaune",
+          "color": "#FFB443",
+          "name": "Jaune"
+        },
+        {
+          "slug": "vert",
+          "color": "#92EA46",
+          "name": "Vert"
+        },
+        {
+          "slug": "bleu",
+          "color": "#005EFF",
+          "name": "Bleu"
+        },
+        {
+          "slug": "rose",
+          "color": "#FE698C",
+          "name": "Rose"
+        },
+        {
+          "slug": "blanc",
+          "color": "#F2F2F2",
+          "name": "Blanc"
+        }
       ]
     },
     "typography": {
