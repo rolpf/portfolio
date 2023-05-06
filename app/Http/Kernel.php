@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\Livewire;
 use Themosis\Core\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -38,7 +39,17 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'wp.can:edit_posts',
             'bindings'
-        ]
+        ],
+        'livewire' => [
+            'wp.headers',
+            'wp.bindings',
+            'bindings',
+            \Illuminate\Session\Middleware\StartSession::class,
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            'csrf',
+            \Themosis\Route\Middleware\WordPressBodyClass::class,
+            Livewire::class,
+        ],
     ];
 
     /**

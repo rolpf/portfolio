@@ -197,7 +197,7 @@ return [
         App\Hooks\Compat::class,
         App\Hooks\Mail::class,
         App\Hooks\Widgets::class,
-        App\Hooks\Projet::class,
+        App\Hooks\Project::class,
     ],
 
     /*
