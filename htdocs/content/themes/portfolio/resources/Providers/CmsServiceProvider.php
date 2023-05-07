@@ -4,6 +4,7 @@ namespace Theme\Providers;
 
 use Theme\Cms\Fields\ProjectFields;
 use Theme\Cms\Fields\ServiceFields;
+use Theme\Cms\OptionPage\OptionPage;
 use Theme\Cms\Taxonomies\ProjectTaxonomies;
 
 class CmsServiceProvider extends \Illuminate\Support\ServiceProvider
@@ -18,5 +19,8 @@ class CmsServiceProvider extends \Illuminate\Support\ServiceProvider
 
         // Taxonomies
         new ProjectTaxonomies();
+
+        // Option page
+        new OptionPage();
     }
 }
