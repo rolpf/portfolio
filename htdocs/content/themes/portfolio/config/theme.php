@@ -28,7 +28,8 @@ return [
     'providers' => [
         Theme\Providers\AssetServiceProvider::class,
         Theme\Providers\RouteServiceProvider::class,
-        \Theme\Providers\CmsServiceProvider::class
+        \Theme\Providers\CmsServiceProvider::class,
+        \Theme\Providers\LivewireServiceProvider::class
     ],
 
     /*

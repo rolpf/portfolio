@@ -8,6 +8,7 @@ class ProjectTaxonomies
     {
         $this->registerClientTaxonomy();
         $this->registerSkillsTaxonomy();
+        $this->registerServicesTaxonomy();
     }
 
     public function registerSkillsTaxonomy()
@@ -39,6 +40,26 @@ class ProjectTaxonomies
                 'name' => __('Clients', THEME_TD),
                 'search_items' => __('Rechercher un client', THEME_TD),
                 'singular_name' => __('Client', THEME_TD),
+            ])
+            ->setArguments([
+                'public' => true,
+                'supports' => ['title'],
+                'menu_icon' => 'dashicons-portfolio',
+                'show_in_nav_menus' => true,
+                'hierarchical' => false,
+            ])
+        ->set();
+    }
+
+    public function registerServicesTaxonomy()
+    {
+        \Taxonomy::make('services', ['projects'], __('Services', THEME_TD), __('Service', THEME_TD))
+            ->setLabels([
+                'add_new_item' => __('Ajouter un service', THEME_TD),
+                'edit_item' => __('Modifier un service', THEME_TD),
+                'name' => __('Services', THEME_TD),
+                'search_items' => __('Rechercher un service', THEME_TD),
+                'singular_name' => __('Service', THEME_TD),
             ])
             ->setArguments([
                 'public' => true,
