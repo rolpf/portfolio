@@ -2,7 +2,10 @@
 
 namespace Theme\Cms\OptionPage;
 
+use Extended\ACF\Fields\Image;
+use Extended\ACF\Fields\Repeater;
 use Extended\ACF\Fields\Tab;
+use Extended\ACF\Fields\Text;
 use Extended\ACF\Fields\WysiwygEditor;
 use Extended\ACF\Location;
 use Themosis\Support\Facades\Action;
@@ -16,7 +19,8 @@ class OptionPage
 
     }
 
-    public function registerOptionPage() {
+    public function registerOptionPage()
+    {
         if (function_exists('acf_add_options_page')) {
             acf_add_options_page([
                 'page_title' => __('Theme Options', THEME_TD),
@@ -30,14 +34,21 @@ class OptionPage
         }
     }
 
-    public function registerOptionPageFields() {
+    public function registerOptionPageFields()
+    {
         if (function_exists('register_extended_field_group')) {
             register_extended_field_group([
-               'title' => __('Theme Options', THEME_TD),
-               'fields' => [
-                   Tab::make(__('Footer', THEME_TD)),
-                   WysiwygEditor::make(__('Contenu du footer', THEME_TD), 'footer_content')
-               ],
+                'title' => __('Theme Options', THEME_TD),
+                'fields' => [
+                    Tab::make(__('Réseaux sociaux', THEME_TD)),
+                    Repeater::make(__('Réseaux sociaux', THEME_TD), 'social_networks')
+                        ->fields([
+                            Text::make(__('Lien', THEME_TD), 'link'),
+                            Image::make(__('Icone', THEME_TD), 'icon'),
+                        ]),
+                    Tab::make(__('Footer', THEME_TD)),
+                    WysiwygEditor::make(__('Contenu du footer', THEME_TD), 'footer_content')
+                ],
                 'location' => [
                     Location::where('options_page', '==', 'theme-options')
                 ]

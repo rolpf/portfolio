@@ -29,7 +29,8 @@ return [
         Theme\Providers\AssetServiceProvider::class,
         Theme\Providers\RouteServiceProvider::class,
         \Theme\Providers\CmsServiceProvider::class,
-        \Theme\Providers\LivewireServiceProvider::class
+        \Theme\Providers\LivewireServiceProvider::class,
+        \Theme\Providers\ThemeServiceProvider::class
     ],
 
     /*
