@@ -7,7 +7,7 @@
         </div>
         <div>
             {!! wp_nav_menu([
-                'menu' => 'menu-footer',
+                'theme_location' => 'menu-footer',
                 'menu_class' => 'flex gap-4 items-center',
             ]) !!}
         </div>
