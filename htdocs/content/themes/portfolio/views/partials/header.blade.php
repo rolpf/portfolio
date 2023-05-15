@@ -5,8 +5,10 @@
                 {!! get_custom_logo() !!}
             </a>
         </div>
-        <div @click="open = true" class="lg:hidden w-8 h-8 bg-green-200">
-
+        <div @click="open = true" class="lg:hidden w-6 h-8 flex flex-col justify-between py-2">
+            <span class="w-full h-px bg-black"></span>
+            <span class="w-full h-px bg-black"></span>
+            <span class="w-full h-px bg-black"></span>
         </div>
         <div :class="{'translate-x-full': !open}" class="col-span-4 duration-500 translate-x-full lg:translate-x-0 flex lg:flex-row flex-col gap-8 items-center justify-center lg:grid lg:grid-cols-4 fixed lg:relative top-0 left-0 h-screen w-screen lg:w-full lg:h-full bg-white lg:bg-transparent z-50">
             <div class="col-span-3 h-fit lg:h-full w-full">
@@ -26,8 +28,9 @@
                     @endforeach
                 @endif
             </div>
-            <div @click="open = false" class="w-8 h-8 bg-red-200 lg:hidden">
-
+            <div @click="open = false" class="w-6 h-6 lg:hidden relative">
+                <span class="w-full h-px bg-black rotate-45 absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2"></span>
+                <span class="w-full h-px bg-black -rotate-45 absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-1/2"></span>
             </div>
         </div>
 
