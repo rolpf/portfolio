@@ -21,10 +21,6 @@
             </div>
         </div>
         <div @class(["h-full", "lg:order-first" => !$field->projects_right])>
-            @php
-                //declare type of $project for IDE
-                /** @var WP_Post $project */
-            @endphp
             @if(count($field->projects) > 1)
                 <x-basic-slider>
                     @foreach($field->projects as $project)

@@ -14,3 +14,9 @@ Route::get('page', function () {
 Route::get('archive', ['projects', function () {
     return view('pages.projects.archive');
 }]);
+
+Route::get('singular', ['projects', function ($project) {
+    return view('pages.projects.singular', [
+        'project' => $project
+    ]);
+}]);

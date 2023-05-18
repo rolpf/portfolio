@@ -2,10 +2,6 @@
     <div class="{{ isset($block['align']) ? sprintf('align%s', $block['align']) : null }}">
         <div class="last-projects-slider overflow-x-hidden py-16">
             <div class="swiper-wrapper">
-                @php
-                    //declare type of $project for IDE
-                    /** @var WP_Post $project */
-                @endphp
                 @foreach($projects as $project)
                     <div class="swiper-slide w-[300px!important] h-[300px!important] bg-center bg-cover">
                         <a class="w-full h-full" href="{{ $project->guid }}">
