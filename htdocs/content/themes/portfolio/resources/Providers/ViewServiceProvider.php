@@ -23,8 +23,6 @@ class ViewServiceProvider extends \Illuminate\Support\ServiceProvider
                 if(is_array($services)) {
                     $view->with('service', $services[0]);
                 }
-                $gallery = get_field('gallery', $view->project->ID);
-                $view->with('gallery', $gallery);
             }
         });
     }

@@ -1,11 +1,15 @@
 import Swiper from "swiper/bundle";
 import 'swiper/css/bundle';
-export default function PhotoGallery() {
+
+export default function PhotoGallery(firstImage) {
     return {
         swiper: null,
-        selected: "init",
+        selected: null,
         init() {
             this.initSwiper();
+            this.$nextTick(() => {
+                this.selected = firstImage;
+            })
         },
         initSwiper() {
             this.swiper = new Swiper(".slider-selector", {
