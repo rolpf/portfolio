@@ -30,7 +30,8 @@ return [
         Theme\Providers\RouteServiceProvider::class,
         \Theme\Providers\CmsServiceProvider::class,
         \Theme\Providers\LivewireServiceProvider::class,
-        \Theme\Providers\ThemeServiceProvider::class
+        \Theme\Providers\ThemeServiceProvider::class,
+        \Theme\Providers\ViewServiceProvider::class
     ],
 
     /*

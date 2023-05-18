@@ -1,5 +1,5 @@
 <!doctype html>
-<html {!! get_language_attributes() !!}>
+<html {!! get_language_attributes() !!} class="overflow-x-hidden max-w-screen">
 <head>
     <meta charset="{{ get_bloginfo('charset') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,12 +7,12 @@
     @head
     @livewireStyles
 </head>
-<body @php(body_class())>
+<body @php(body_class("max-w-screen overflow-x-hidden"))>
 <div id="page" class="site">
 
     @include('partials.header')
 
-    <div id="content" class="site-content">
+    <div id="content" class="site-content min-h-screen">
         <div id="primary" class="content-area">
             <main id="main" class="site-main">
                 @yield('content')
