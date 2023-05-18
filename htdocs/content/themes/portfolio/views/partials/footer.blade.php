@@ -1,4 +1,4 @@
-<footer class="bg-jaune py-4">
+<footer class="bg-jaune py-4 absolute bottom-0 left-0 w-full">
     <div class="max-w-[1280px] px-4 lg:px-0 flex-col lg:flex-row gap-4 lg:gap-0 w-full mx-auto flex justify-between items-center">
         <div>
             @if(get_field('footer_content', 'options'))
