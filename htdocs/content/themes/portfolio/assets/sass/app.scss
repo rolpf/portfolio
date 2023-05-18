@@ -1,5 +1,7 @@
 @import "normalize";
 @import "master-template";
+@import "blockStyles/block-styles";
+@import "blocks/last-projects-slider";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

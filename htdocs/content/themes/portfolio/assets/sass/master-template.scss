@@ -19,11 +19,17 @@
 }
 
 .alignleft {
-  max-width: calc(1280px / 2);
+  max-width: 640px;
   margin-left: calc((100% - 1280px) / 2);
 }
 
 .alignright {
-  max-width: calc(1024px / 2);
+  max-width: 512px;
   margin-right: calc((100% - 1280px) / 2);
+}
+
+@media (max-width: 1025px) {
+  .wp-block-button {
+    width: 100% !important;
+  }
 }

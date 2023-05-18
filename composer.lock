@@ -4,8 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f64e4e55a4f7050fc537f68abc3f9dc3",
+    "content-hash": "42c8975e39dead1264e74ac7c27a9e7a",
     "packages": [
+        {
+            "name": "amphibee/acf-blocks",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AmphiBee/acf-blocks.git",
+                "reference": "ea0f5c02a062a9cc5e7775812b798c430ccb0a56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AmphiBee/acf-blocks/zipball/ea0f5c02a062a9cc5e7775812b798c430ccb0a56",
+                "reference": "ea0f5c02a062a9cc5e7775812b798c430ccb0a56",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0",
+                "vinkla/extended-acf": "^13.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "9.5.22",
+                "squizlabs/php_codesniffer": "3.7.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AmphiBee\\AcfBlocks\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "AmphiBee",
+                    "email": "dev@amphibee.fr"
+                }
+            ],
+            "description": "Provide abstracted class to help build ACF-based Gutenberg Blocks",
+            "support": {
+                "issues": "https://github.com/AmphiBee/acf-blocks/issues",
+                "source": "https://github.com/AmphiBee/acf-blocks/tree/1.2"
+            },
+            "time": "2022-08-20T09:32:16+00:00"
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.1.1",
