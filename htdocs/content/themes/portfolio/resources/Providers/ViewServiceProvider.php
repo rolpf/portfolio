@@ -16,5 +16,16 @@ class ViewServiceProvider extends \Illuminate\Support\ServiceProvider
 
             $view->with('projects', $query->posts);
         });
+
+        \View::composer('pages.projects.singular', function ($view) {
+            if (isset($view->project)) {
+                $services = wp_get_post_terms($view->project->ID, 'services');
+                if(is_array($services)) {
+                    $view->with('service', $services[0]);
+                }
+                $gallery = get_field('gallery', $view->project->ID);
+                $view->with('gallery', $gallery);
+            }
+        });
     }
 }
