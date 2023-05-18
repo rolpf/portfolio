@@ -7,12 +7,12 @@
     @head
     @livewireStyles
 </head>
-<body @php(body_class("max-w-screen overflow-x-hidden"))>
+<body @php(body_class("max-w-screen overflow-x-hidden bg-blanc"))>
 <div id="page" class="site">
 
     @include('partials.header')
 
-    <div id="content" class="site-content min-h-screen">
+    <div id="content" class="site-content min-h-[80vh]">
         <div id="primary" class="content-area">
             <main id="main" class="site-main">
                 @yield('content')

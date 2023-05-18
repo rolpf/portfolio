@@ -1,0 +1,64 @@
+.nf-before-form-content {
+  display: none;
+}
+
+nf-fields-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+}
+
+nf-fields-wrap nf-field {
+  grid-column: span 2;
+
+  &:nth-child(1) {
+    grid-column: span 1;
+  }
+
+  &:nth-child(2) {
+    grid-column: span 1;
+  }
+}
+
+.nf-form-cont {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+  position: relative;
+
+  textarea {
+    height: 100px !important;
+  }
+
+  input[type=submit] {
+    width: 50%;
+    background-color: var(--wp--preset--color--jaune);
+    color: black;
+    margin-left: auto;
+    display: block;
+
+    &:hover {
+      background-color: var(--wp--preset--color--jaune);
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 30%;
+    aspect-ratio: 1;
+    border-radius: 100rem;
+    background-color: var(--wp--preset--color--jaune);
+    display: block;
+    @media (max-width: 1024px) {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      transform: translateX(-20%) translateY(-20%);
+      width: 100%;
+    }
+  }
+}
