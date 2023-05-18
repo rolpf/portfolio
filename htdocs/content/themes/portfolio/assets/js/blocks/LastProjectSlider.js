@@ -10,6 +10,7 @@ export default function LastProjectSlider() {
                 centeredSlides: true,
                 slidesPerView: "auto",
                 rewind: true,
+                initialSlide: 1,
                 coverflowEffect: {
                     rotate: 0,
                     stretch: 0,
@@ -19,6 +20,7 @@ export default function LastProjectSlider() {
                 },
                 pagination: {
                     el: ".swiper-pagination",
+                    clickable: true,
                 },
                 spaceBetween: 100,
             });
