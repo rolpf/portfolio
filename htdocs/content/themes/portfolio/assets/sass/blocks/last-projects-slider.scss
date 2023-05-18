@@ -1,11 +1,14 @@
-.swiper-slide {
-  opacity: 0;
+.last-projects-slider {
+  .swiper-slide {
+    opacity: 0;
+  }
+
+  .swiper-slide-active, .swiper-slide-next, .swiper-slide-prev {
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--wp--preset--color--rose) !important;
+  }
 }
 
-.swiper-slide-active, .swiper-slide-next, .swiper-slide-prev {
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: var(--wp--preset--color--rose) !important;
-}
