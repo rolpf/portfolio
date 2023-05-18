@@ -14,6 +14,9 @@ class ProjectArchive extends \Livewire\Component
     public function mount() {
         global $wp_query;
         $this->query = $wp_query->query;
+        if(request()->has('service')) {
+            $this->filter = request()->get('service');
+        }
     }
     public function render() {
 

@@ -3,6 +3,7 @@
 namespace Theme\Providers;
 
 use Theme\Cms\Blocks\LastProjectsBlock;
+use Theme\Cms\Blocks\ServiceBlock;
 use Theme\Cms\Fields\ProjectFields;
 use Theme\Cms\Fields\ServiceFields;
 use Theme\Cms\OptionPage\OptionPage;
@@ -26,6 +27,7 @@ class CmsServiceProvider extends \Illuminate\Support\ServiceProvider
 
         // Blocks
         new LastProjectsBlock();
+        new ServiceBlock();
 
     }
 }

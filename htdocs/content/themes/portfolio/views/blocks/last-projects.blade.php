@@ -1,5 +1,5 @@
 @isset($projects)
-    <div class="{{ isset($block['align']) ? sprintf('align-%s', $block['align']) : null }}">
+    <div class="{{ isset($block['align']) ? sprintf('align%s', $block['align']) : null }}">
         <div class="last-projects-slider overflow-x-hidden py-16">
             <div class="swiper-wrapper">
                 @php
