@@ -25,10 +25,11 @@
             $client = get_the_terms($project->ID, 'clients')[0] ?? null;
             $skills = get_the_terms($project->ID, 'skills');
             $image = get_the_post_thumbnail($project->ID, 'full', ['class' => 'w-full h-full object-cover object-center']);
+            $color = get_field('color', $service);
         @endphp
         <div class="h-fit w-full mb-4">
             <div @click="toggle({{ $project->ID }})" class="w-full  px-4 grid grid-cols-2 gap-8 lg:flex items-center justify-between h-20"
-                 style="background-color: {{ get_field('color', $service) }}">
+                 style="background-color: {{ $color }}">
                 <div class="py-2">
                     <p class="text-white text-lg lg:text-2xl font-bold line-clamp-1 lg:line-clamp-3">{{ $project->post_title }}</p>
                     <p class="text-white text-xs line-clamp-1">
@@ -55,8 +56,11 @@
             <div class="max-h-0 h-fit  w-full overflow-hidden duration-500"
                  :class="{'max-h-0': selected !== {{ $project->ID }}, 'max-h-[100rem]': selected === {{ $project->ID }} }">
                 <div class="p-4 grid grid-cols-2 w-full">
-                    <div class="flex items-center">
-                        {{ $project->post_excerpt }}
+                    <div class="flex flex-col justify-center gap-8">
+                        <div>
+                            {{ $project->post_excerpt }}
+                        </div>
+                        <a style="background-color: {{ $color }}" class="w-fit px-4 py-2 text-white" href="{{ html_entity_decode($project->guid) }}">{{ __("En savoir plus") }}</a>
                     </div>
                     <div class="pr-20">
                         @if($image)
